@@ -6,7 +6,7 @@ const logoutButton = document.getElementById('logoutButton');
 
 // Проверка авторизации
 if (!currentUserId) {
-   window.location.href = '../log/index.html';
+   window.location.href = './index.html';
 } else {
    userNameDisplay.textContent = localStorage.getItem('userName');
 }
@@ -15,7 +15,7 @@ if (!currentUserId) {
 logoutButton.addEventListener('click', () => {
    localStorage.removeItem('userId');
    localStorage.removeItem('userName');
-   window.location.href = '../log/';
+   window.location.href = './index.html';
 });
 
 // Получение фильмов для текущего пользователя

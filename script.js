@@ -102,7 +102,7 @@ document.querySelector('.sign-in-container form').addEventListener('submit', asy
          localStorage.setItem('userName', user.name);
          localStorage.setItem('userId', user.userId);
 
-         window.location.href = '../main/main.html';
+         window.location.href = './main.html';
       } else {
          alert("Invalid email or password.");
       }
