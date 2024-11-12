@@ -1,0 +1,294 @@
+:root {
+   --backround-color: #f6f5f7;
+   --text-color: #0F0326;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: var(--backround-color);
+   max-width: 91.9vw;
+}
+
+
+header {
+   display: flex;
+   height: 75px;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 50px;
+   border-bottom: 1px solid var(--text-color);
+   margin-bottom: 20px;
+}
+
+
+
+
+
+h1 {
+   color: var(--text-color);
+   font-size: 25px;
+}
+
+header button {
+   border: 0;
+   background-color: var(--text-color);
+   color: var(--backround-color);
+   border-radius: 5px;
+   width: 100px;
+   padding: 10px;
+}
+
+.main-content {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 0 50px;
+}
+
+.movie-form {
+   display: flex;
+   align-items: center;
+   gap: 25px;
+}
+
+#movieTitle {
+   border-radius: 15px;
+   border: 1px solid var(--text-color);
+   background-color: transparent;
+   color: var(--text-color);
+   padding-left: 25px;
+   height: 25px;
+   font-size: 17px;
+   padding: 8px;
+}
+
+
+.movie-form input,
+.movie-form select,
+.movie-form label,
+.movie-form button {
+   background-color: transparent;
+   border: 1px solid #333;
+   border-radius: 8px;
+   padding: 8px;
+   font-size: 16px;
+   color: #333;
+   outline: none;
+}
+
+.movie-form input[type="checkbox"] {
+   width: 18px;
+   height: 18px;
+   accent-color: #333;
+}
+
+.movie-form input[type="file"] {
+   display: none;
+}
+
+.movie-form {
+   background-color: transparent;
+   display: flex;
+   flex-wrap: wrap;
+   border-radius: 8px;
+   cursor: pointer;
+   font-size: 16px;
+   color: #333;
+}
+
+
+
+
+#movieTitle,
+#movieGenre,
+#movieRating,
+#filterGenre,
+#filterRating,
+#showWatched,
+#addMovie {
+   background-color: transparent;
+   border: 1px solid var(--text-color);
+   padding: 8px 12px;
+   border-radius: 8px;
+}
+
+#movieRating {
+   width: 100px;
+}
+
+.movie-form button {
+   background-color: var(--text-color);
+   color: var(--backround-color);
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   border-radius: 8px;
+}
+
+.movie-form label[for="movieWatched"] {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+
+
+#addMovie {
+   background-color: var(--text-color);
+   color: #ffffff;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.filter-options {
+   display: flex;
+   height: 35px;
+   align-items: center;
+   gap: 20px;
+}
+
+
+.movie-list {
+   margin-top: 20px;
+   height: auto;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 30px;
+   margin-bottom: 50px;
+}
+
+.movie-card {
+   display: flex;
+   flex-direction: column;
+   height: 250px;
+   width: 200px;
+   align-items: center;
+   background: #E8EAF6;
+   border-radius: 5px;
+   padding: 10px;
+   margin: 10px 0;
+   justify-content: space-between;
+}
+
+.movie-card img {
+   width: 100%;
+   height: 100px;
+   object-fit: contain;
+}
+
+.movie-card h3 {
+   margin: 0;
+   color: #333;
+}
+
+.movie-card p {
+   margin: 0 5px;
+}
+
+.movie-card button {
+   padding: 5px;
+   margin: 0 5px;
+   cursor: pointer;
+   border: none;
+   border-radius: 3px;
+}
+
+
+
+.delete-btn {
+   background-color: #0F0326;
+   color: var(--backround-color);
+   width: 100%;
+   padding: 10px;
+}
+
+.watched-btn {
+   background-color: var(--backround-color);
+   color: var(--text-color);
+   border: 1px solid var(--text-color);
+   width: 100%;
+   padding: 10px;
+}
+
+#stars {
+   color: rgb(204, 193, 71);
+}
+
+@media screen and (max-width: 1025px) {
+   header {
+      padding: 0 30px;
+   }
+
+   .main-content {
+      padding: 0 30px;
+   }
+
+   select option {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      font-size: 10px;
+   }
+
+   .filter-options option {
+      padding: 0;
+      height: 15px;
+      width: 50%;
+      font-size: 10px;
+   }
+}
+
+@media screen and (max-width: 769px) {
+   .movie-list {
+      padding: 0;
+   }
+
+   .movie-card {
+      width: 100%;
+      height: 350px;
+   }
+
+   .movie-card img {
+      width: 100%;
+      height: 150px;
+   }
+
+   .filter-options {
+      justify-content: center;
+   }
+
+   .movie-form {
+      justify-content: center;
+      align-items: center;
+   }
+
+   #movieRating,
+   #movieWatched,
+   #movieGenre {
+      padding: 10px;
+   }
+
+   .movie-form labe {
+      border: 0;
+   }
+
+   #movieTitle,
+   #addMovie {
+      width: 100%;
+   }
+
+   .delete-btn,
+   .watched-btn {
+      height: 35px;
+   }
+   #stars{
+      font-size: 20px;
+   }
+   .movie-card h3 {
+      font-size: 25px;
+   }
+}

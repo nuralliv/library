@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Movie Library</title>
+   <link rel="stylesheet" href="../main/style.css">
+   <script defer src="../main/script.js"></script>
+</head>
+
+<body>
+   <header>
+      <h1>Hi, <span id="userName"></span></h1>
+      <button id="logoutButton">Log Out</button>
+   </header>
+   <main class="main-content">
+
+
+
+
+      <div class="movie-form">
+         <input id="movieTitle" type="text" autocomplete="off" placeholder="Movie Title" required />
+
+         <select id="movieGenre">
+            <option value="">Select Genre</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+         </select>
+
+         <div class="rating-container">
+            <input id="movieRating" type="number" min="1" max="5" placeholder="Rating (1-5)" required />
+            <span id="ratingDisplay"></span>
+         </div>
+
+         <!-- Поле для выбора файла с использованием label -->
+         <input id="movieImage" type="file" accept="image/*" required />
+         <label for="movieImage">Choose File</label>
+
+         <label for="movieWatched">
+            <input id="movieWatched" type="checkbox" /> Watched
+         </label>
+
+         <button id="addMovie">Add Movie</button>
+      </div>
+
+      <h3>Filters</h3>
+
+      <div class="filter-options">
+         <select id="filterGenre">
+            <option value="">All Genre</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Horror">Horror</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+         </select>
+         <select id="filterRating">
+            <option value="">All Rating</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+         </select>
+         <button id="showWatched">Show Watched</button>
+      </div>
+
+      <div id="movieList" class="movie-list"></div>
+      </div>
+   </main>
+</body>
+
+</html>
