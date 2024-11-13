@@ -37,7 +37,7 @@ function validateInputs() {
 
 async function getNextUserId() {
    try {
-      const response = await fetch('https://54d749da1e7f46ac.mokky.dev/users');
+      const response = await fetch('https://67348788a042ab85d11a8d4d.mockapi.io/users');
       if (!response.ok) {
          throw new Error("Failed to fetch users from server.");
       }
@@ -61,7 +61,7 @@ document.querySelector('.sign-up-container form').addEventListener('submit', asy
 
    try {
       const userId = await getNextUserId(); // Fetch the next available userId
-      const response = await fetch('https://54d749da1e7f46ac.mokky.dev/users', {
+      const response = await fetch('https://67348788a042ab85d11a8d4d.mockapi.io/users', {
          method: 'POST',
          headers: {
             'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ document.querySelector('.sign-in-container form').addEventListener('submit', asy
    const password = e.target.querySelector('input[type="password"]').value;
 
    try {
-      const response = await fetch('https://54d749da1e7f46ac.mokky.dev/users');
+      const response = await fetch('https://67348788a042ab85d11a8d4d.mockapi.io/users');
       if (!response.ok) {
          alert("Failed to fetch users from server.");
          console.error("Server response:", response.status);

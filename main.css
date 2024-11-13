@@ -172,6 +172,8 @@ header button {
    padding: 10px;
    margin: 10px 0;
    justify-content: space-between;
+   transition: all .7s ease;
+   animation: fadeIn 0.3s ease forwards;
 }
 
 .movie-card img {
@@ -216,6 +218,16 @@ header button {
 
 #stars {
    color: rgb(204, 193, 71);
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
 }
 
 @media screen and (max-width: 1025px) {
@@ -285,9 +297,11 @@ header button {
    .watched-btn {
       height: 35px;
    }
-   #stars{
+
+   #stars {
       font-size: 20px;
    }
+
    .movie-card h3 {
       font-size: 25px;
    }

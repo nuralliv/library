@@ -1,4 +1,4 @@
-const movieAPI = 'https://54d749da1e7f46ac.mokky.dev/movies';
+const movieAPI = 'https://67348788a042ab85d11a8d4d.mockapi.io/movies';
 const currentUserId = localStorage.getItem('userId');
 const movieList = document.getElementById('movieList');
 const userNameDisplay = document.getElementById('userName');
@@ -44,7 +44,7 @@ function displayMovies(movies) {
       .filter(movie => !showWatchedOnly || movie.watched)
       .forEach(movie => {
          const movieCard = document.createElement('div');
-         movieCard.className = `movie-card ${movie.watched ? 'watched' : 'unwatched'}`;
+         movieCard.className = `movie-card `;
          movieCard.innerHTML = `
             <h3>${movie.title}</h3>
                         ${movie.imageUrl ? `<img src="${movie.imageUrl}" alt="${movie.title} image" class="movie-image"/>` : ''}
